@@ -172,21 +172,8 @@ class Grove4DigitDisplay(object):
         self.clk.write_digital(0)
         self.dio.write_digital(1)
         self.clk.write_digital(1)
-
-        ### not really sure what this bit is doing...
-        # print('while loop incoming!')
-        # self.dio.dir(GPIO.IN)
-        ### so wait until it reads something back from the dio pin
-        # while self.dio.read_digital() == 0:
-            # sleep(.1)
-            # if self.dio.read_digital() == 1:
-                # self.dio.dir(GPIO.OUT)
-        # print('while loop ran for a while')
-        # then write 0 to the dio pin
         self.dio.write_digital(0)
-                # self.dio.dir(GPIO.IN)
-        # self.dio.dir(GPIO.OUT)
-
+        
     def _start(self):
         self.clk.write_digital(1)
         self.dio.write_digital(1)
@@ -208,12 +195,8 @@ class Grove4DigitDisplay(object):
 
 Grove = Grove4DigitDisplay
 
-
+# Example to run the display
 def main():
-    # if len(sys.argv) < 3:
-    #     print('Usage: {} clk dio'.format(sys.argv[0]))
-    #     sys.exit(1)
-    # from microbit import *
     display.show(Image.HAPPY)
     grove_display = Grove4DigitDisplay(15, 1)
     t = 1234
@@ -229,6 +212,7 @@ def main():
         print(t)
         sleep(50)
 
+# Run the main() function
 main()
 # if __name__ == '__main__':
     # main()
