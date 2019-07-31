@@ -1,4 +1,10 @@
-# Grove Gesture Sensor in micropython
-This is my attempt at getting the grove gesture sensor to work with python for the BBC Micro:bit
+# Grove Gesture Sensor Kit in micropython
 
-It is created based on the [PXT-Grove repository](https://github.com/seeed-studio/pxt-grove)
+Allows you to use the [Grove Inventor Kit for Micro:Bit](http://wiki.seeedstudio.com/Grove_Inventor_Kit_for_microbit/) with micropython and the BBC Micro:Bit.
+
+Use the [PXT-Grove repository](https://github.com/seeed-studio/pxt-grove) from Seeed studios to work with MakeCode.
+
+Grove sensors included in this repo:
+- [Four Digit Display](http://wiki.seeedstudio.com/Grove-4-Digit_Display/)
+- [Ultrasonic Ranger](http://wiki.seeedstudio.com/Grove-Ultrasonic_Ranger/)
+- [Gesture Sensor](http://wiki.seeedstudio.com/Grove-Gesture_v1.0/)
