@@ -43,18 +43,6 @@ gesture_map = {
     'wave': wave
 }
 
-sound_map = {
-    'up': music.JUMP_UP,
-    'down': music.JUMP_DOWN,
-    'left': music.POWER_UP,
-    'right': music.POWER_DOWN,
-    'forward': music.BA_DING,
-    'backward': music.WAWAWAWAA,
-    'clockwise': music.RINGTONE,
-    'anticlockwise': music.DADADADUM,
-    'wave': music.PYTHON
-}
-
 display.show(Image.YES)
 sleep(500)
 
@@ -63,8 +51,8 @@ while True:
     if g == 'none':
         display.clear()
     else:
+        print(g)
         display.show(gesture_map[g])
-        music.play(sound_map[g])
         sleep(300)
 
 
