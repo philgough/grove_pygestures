@@ -1,7 +1,6 @@
 from microbit import *
 import utime
 
-
 class Rangefinder:
     def __init__(self, pin):
         '''Setup a rangefinder on the specified pin'''
@@ -20,24 +19,17 @@ class Rangefinder:
         flag = False
         timeout = 100000
 
-        while self.pin.read_digital() == 0:
-            if utime.ticks_diff(start, init) > timeout:
-                flag = True
-                break
-            else:
-                start = utime.ticks_us()
+        while not self.pin.read_digital():
+            if utime.ticks_us() - init > timeout:
+                return -1
 
-        while self.pin.read_digital() == 1:
-            if utime.ticks_diff(stop, init) > timeout:
-                flag = True
-                break
-            else:
-                stop = utime.ticks_us()
+        start = utime.ticks_us()
 
-        if flag is True:
-            flag = False
-            return -1
+        while self.pin.read_digital():
+            if utime.ticks_us() - start > timeout:
+                return -1
 
-        else:
-            distance = utime.ticks_diff(stop, start) * 343 / 20000
-            return distance
+        stop = utime.ticks_us()
+        distance = (stop - start) * 343 / 20000
+        print(stop, start)
+        return distance
