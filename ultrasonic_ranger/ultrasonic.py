@@ -32,9 +32,9 @@ def measurementInCM():
             stop = utime.ticks_us()
 
     if flag is True:
-        print((-1,))
         flag = False
+        return -1
 
     else:
-        distance = utime.ticks_diff(stop, start) * 343 / 2000
-        print((distance, ))
+        distance = utime.ticks_diff(stop, start) * 343 / 20000
+        return distance
