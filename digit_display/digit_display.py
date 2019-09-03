@@ -54,7 +54,7 @@ BRIGHT_DEFAULT = 2
 BRIGHT_HIGHEST = 7
 
 
-class Grove4DigitDisplay(object):
+class Grove4DigitDisplay:
     colon_index = 1
 
     def __init__(self, clk, dio, brightness=BRIGHT_DEFAULT):
@@ -173,7 +173,7 @@ class Grove4DigitDisplay(object):
         self.dio.write_digital(1)
         self.clk.write_digital(1)
         self.dio.write_digital(0)
-        
+
     def _start(self):
         self.clk.write_digital(1)
         self.dio.write_digital(1)
@@ -191,15 +191,3 @@ class Grove4DigitDisplay(object):
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         self._stop()
-
-
-Grove = Grove4DigitDisplay
-
-# Example to run the display
-def main():
-    
-
-# Run the main() function
-main()
-# if __name__ == '__main__':
-    # main()
