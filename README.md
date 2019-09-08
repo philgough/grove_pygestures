@@ -2,7 +2,7 @@
 
 Allows you to use the [Grove Inventor Kit for Micro:Bit](http://wiki.seeedstudio.com/Grove_Inventor_Kit_for_microbit/) with micropython and the BBC Micro:Bit.
 
-Use the [PXT-Grove repository](https://github.com/seeed-studio/pxt-grove) from Seeed studios to work with MakeCode.
+Modified from code originally in the [PXT-Grove repository](https://github.com/seeed-studio/pxt-grove) from Seeed studios that works with MakeCode.
 
 Grove sensors included in this repo:
 - [Four Digit Display](http://wiki.seeedstudio.com/Grove-4-Digit_Display/)
